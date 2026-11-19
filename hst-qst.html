@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- SITE CONFIG: base URL = https://goksonline.github.io/quilt-calculators/ (set in _build/build.js, or search-and-replace this exact string in all .html, sitemap.xml, robots.txt) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Half Square Triangle Calculator: HST, QST &amp; Flying Geese</title>
+<meta name="description" content="Free half square triangle calculator. Cut sizes for HST 2, 4 and 8 at a time, quarter square triangles and no-waste flying geese, plus how many squares to cut.">
+<link rel="canonical" href="https://goksonline.github.io/quilt-calculators/hst-qst.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuiltCalc">
+<meta property="og:title" content="Half Square Triangle Calculator: HST, QST &amp; Flying Geese">
+<meta property="og:description" content="Free half square triangle calculator. Cut sizes for HST 2, 4 and 8 at a time, quarter square triangles and no-waste flying geese, plus how many squares to cut.">
+<meta property="og:url" content="https://goksonline.github.io/quilt-calculators/hst-qst.html">
+<meta property="og:image" content="https://goksonline.github.io/quilt-calculators/og-quiltcraft.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3a2830">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do you add 7/8 inch for half square triangles?","acceptedAnswer":{"@type":"Answer","text":"The diagonal seam takes up fabric, and the triangle points extend past the seam line. Together that adds exactly 7/8 inch to the finished size when you cut squares and sew two HSTs at a time."}},{"@type":"Question","name":"Should I cut HSTs oversized and trim?","acceptedAnswer":{"@type":"Answer","text":"Many quilters do. Adding 1/4 inch and trimming each unit to the unfinished size gives very accurate HSTs, at the cost of a little fabric and time."}},{"@type":"Question","name":"What size do I cut for 8 at a time HSTs?","acceptedAnswer":{"@type":"Answer","text":"Double the finished size plus 7/8 inch: (finished + 7/8) x 2. For 2 inch finished HSTs that is a 5 3/4 inch square, which makes eight units."}},{"@type":"Question","name":"What size square for a quarter square triangle?","acceptedAnswer":{"@type":"Answer","text":"Finished size plus 1 1/4 inches. For a 4 inch finished hourglass, cut 5 1/4 inch squares. One square of each fabric makes two hourglass units."}},{"@type":"Question","name":"How do I make no-waste flying geese?","acceptedAnswer":{"@type":"Answer","text":"Cut one large square at finished width plus 1 1/4 inch and four small squares at finished height plus 7/8 inch. This makes four geese with no leftover triangles."}}]}</script>
+</head>
+<body data-page="hst">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">QuiltCalc</a><nav aria-label="Calculators"><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html" aria-current="page">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a></nav></div></header>
+<main id="main"><div class="wrap">
+<h1>Half Square Triangle Calculator</h1>
+<p class="lede">Enter the finished size of your unit to get the square size to cut for every HST method, quarter square triangles and no-waste flying geese.</p>
+<form class="calc" id="calc" novalidate>
+<div class="fields"><div><label for="fin">Finished HST / QST size</label><input id="fin" name="fin" type="text" inputmode="decimal" autocomplete="off" value="3"></div><div><label for="qty">How many units you need</label><input id="qty" name="qty" type="text" inputmode="decimal" autocomplete="off" value="24"></div></div>
+<label class="chk"><input type="checkbox" id="trim"> Add 1/4" extra so I can trim to size</label>
+<fieldset><legend>Flying geese (optional)</legend><div class="fields"><div><label for="gw">Finished width</label><input id="gw" name="gw" type="text" inputmode="decimal" autocomplete="off" value="4"></div><div><label for="gh">Finished height</label><input id="gh" name="gh" type="text" inputmode="decimal" autocomplete="off" value="2"></div><div><label for="gqty">How many geese</label><input id="gqty" name="gqty" type="text" inputmode="decimal" autocomplete="off" value="16"></div></div></fieldset>
+<p class="hint">Inches. Fractions like <b>2 1/2</b> or decimals like <b>2.5</b> both work.</p>
+<div id="result" aria-live="polite"></div>
+</form>
+<aside class="pro" aria-label="QuiltCraft Pro"><p>Want to design the whole quilt and get every fabric's yardage automatically? QuiltCraft Pro builds the cutting list and a printable pattern as you design.</p><a class="btn" href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=hst" rel="noopener">QuiltCraft Pro &rarr;</a></aside>
+<h2>How it's calculated</h2>
+<p>All these methods start with squares and use a 1/4" seam. The added amounts come from geometry: a half square triangle loses 1/4" of seam on its diagonal plus the length of the point that sticks out past the seam, which works out to <b>7/8"</b> more than the finished size. A quarter square triangle is cut twice on the diagonal, so it needs <b>1 1/4"</b>.</p>
+<div class="formula"><p>HST 2-at-a-time: square = finished + 7/8"</p><p>HST 4-at-a-time: square = (finished + 7/8") &times; 1.414, rounded up to 1/8"</p><p>HST 8-at-a-time: square = (finished + 7/8") &times; 2</p><p>QST (hourglass): square = finished + 1 1/4"</p><p>Flying geese, no waste: large = finished width + 1 1/4"; small = finished height + 7/8"</p></div>
+<p><b>2-at-a-time:</b> layer two squares, draw a diagonal, sew 1/4" on both sides, cut on the line. <b>4-at-a-time:</b> sew all the way around the edge of two layered squares and cut on both diagonals; the exact size is (finished + 7/8") &times; &radic;2, and the edges of the units are on the bias, so handle gently. <b>8-at-a-time:</b> sew 1/4" each side of both diagonals, then cut horizontally, vertically and on both diagonals.</p>
+<p><b>Worked example:</b> for 3" finished HSTs, cut 3 7/8" squares for 2-at-a-time, 5 1/2" squares (5.48" exact) for 4-at-a-time, or 7 3/4" squares for 8-at-a-time. Every unit should then measure 3 1/2" before it is sewn into the block.</p>
+<p>The flying geese method makes four geese from one large square and four small squares. For 4" &times; 2" geese, cut a 5 1/4" large square and four 2 7/8" small squares. Many quilters add 1/4" to any of these sizes and trim the units down afterward; tick the box to do that.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>Why do you add 7/8 inch for half square triangles?</summary><p>The diagonal seam takes up fabric, and the triangle points extend past the seam line. Together that adds exactly 7/8 inch to the finished size when you cut squares and sew two HSTs at a time.</p></details>
+<details><summary>Should I cut HSTs oversized and trim?</summary><p>Many quilters do. Adding 1/4 inch and trimming each unit to the unfinished size gives very accurate HSTs, at the cost of a little fabric and time.</p></details>
+<details><summary>What size do I cut for 8 at a time HSTs?</summary><p>Double the finished size plus 7/8 inch: (finished + 7/8) x 2. For 2 inch finished HSTs that is a 5 3/4 inch square, which makes eight units.</p></details>
+<details><summary>What size square for a quarter square triangle?</summary><p>Finished size plus 1 1/4 inches. For a 4 inch finished hourglass, cut 5 1/4 inch squares. One square of each fabric makes two hourglass units.</p></details>
+<details><summary>How do I make no-waste flying geese?</summary><p>Cut one large square at finished width plus 1 1/4 inch and four small squares at finished height plus 7/8 inch. This makes four geese with no leftover triangles.</p></details>
+<h2>More free quilt calculators</h2><ul class="related"><li><a href="binding.html">Binding</a></li><li><a href="backing.html">Backing</a></li><li><a href="borders.html">Borders</a></li><li><a href="yardage.html">Yardage</a></li><li><a href="quilt-sizes.html">Quilt sizes</a></li></ul>
+</div></main>
+<footer><div class="wrap">
+<div class="cols"><a href="./">All calculators</a><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a><a href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=footer" rel="noopener">QuiltCraft Pro</a></div>
+<p>Free quilting calculators. Results assume a 1/4" seam allowance; always double-check measurements before you cut. Updated 2026-11-19.</p>
+</div></footer>
+<script src="calc.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

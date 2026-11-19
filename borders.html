@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- SITE CONFIG: base URL = https://goksonline.github.io/quilt-calculators/ (set in _build/build.js, or search-and-replace this exact string in all .html, sitemap.xml, robots.txt) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quilt Border Calculator: Strips &amp; Yardage | QuiltCalc</title>
+<meta name="description" content="Free quilt border calculator for one or two borders. Get the cut width, number of strips, side and top border lengths and yardage in yards and meters.">
+<link rel="canonical" href="https://goksonline.github.io/quilt-calculators/borders.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuiltCalc">
+<meta property="og:title" content="Quilt Border Calculator: Strips &amp; Yardage">
+<meta property="og:description" content="Free quilt border calculator for one or two borders. Get the cut width, number of strips, side and top border lengths and yardage in yards and meters.">
+<meta property="og:url" content="https://goksonline.github.io/quilt-calculators/borders.html">
+<meta property="og:image" content="https://goksonline.github.io/quilt-calculators/og-quiltcraft.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3a2830">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How wide do I cut a quilt border?","acceptedAnswer":{"@type":"Answer","text":"Cut it 1/2 inch wider than you want it to finish. A 3 inch finished border is cut 3 1/2 inches wide."}},{"@type":"Question","name":"Why measure the quilt through the center?","acceptedAnswer":{"@type":"Answer","text":"The outer edges of a pieced top stretch as you handle them. Cutting borders to the center measurement and easing the edges to fit keeps the quilt flat and square instead of wavy."}},{"@type":"Question","name":"Should I sew side borders or top and bottom first?","acceptedAnswer":{"@type":"Answer","text":"Either works as long as you are consistent. This calculator assumes sides first, so side borders equal the top's length and top and bottom borders equal the width plus both side borders."}},{"@type":"Question","name":"How much extra fabric for mitered borders?","acceptedAnswer":{"@type":"Answer","text":"Each strip must be longer by about twice the border width plus 2 to 4 inches, because the miter extends past the quilt corner."}}]}</script>
+</head>
+<body data-page="borders">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">QuiltCalc</a><nav aria-label="Calculators"><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html" aria-current="page">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a></nav></div></header>
+<main id="main"><div class="wrap">
+<h1>Quilt Border Calculator</h1>
+<p class="lede">Plan one or two borders: cut width, how many strips to cut across the width of fabric, the lengths to sew on and how much fabric to buy.</p>
+<form class="calc" id="calc" novalidate>
+<div class="fields"><div><label for="qw">Quilt top width (now)</label><input id="qw" name="qw" type="text" inputmode="decimal" autocomplete="off" value="48"></div><div><label for="qh">Quilt top length (now)</label><input id="qh" name="qh" type="text" inputmode="decimal" autocomplete="off" value="60"></div><div><label for="b1">Border 1 finished width</label><input id="b1" name="b1" type="text" inputmode="decimal" autocomplete="off" value="2"></div><div><label for="b2">Border 2 finished width (optional)</label><input id="b2" name="b2" type="text" inputmode="decimal" autocomplete="off" value="5"></div><div><label for="wof">Usable width of fabric (WOF)</label><input id="wof" name="wof" type="text" inputmode="decimal" autocomplete="off" value="42"></div></div>
+<p class="hint">Inches. Fractions like <b>2 1/2</b> or decimals like <b>2.5</b> both work.</p>
+<div id="result" aria-live="polite"></div>
+</form>
+<aside class="pro" aria-label="QuiltCraft Pro"><p>Want to design the whole quilt and get every fabric's yardage automatically? QuiltCraft Pro builds the cutting list and a printable pattern as you design.</p><a class="btn" href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=borders" rel="noopener">QuiltCraft Pro &rarr;</a></aside>
+<h2>How it's calculated</h2>
+<p>Measure your quilt top as it is now, raw edge to raw edge, through the middle rather than along the edges (edges stretch). Each border is cut <b>1/2" wider than its finished width</b> to allow a 1/4" seam on both long sides, so a 2" finished border is cut 2 1/2" wide.</p>
+<div class="formula"><p>cut width = finished width + 1/2"</p><p>strip length needed = 2 &times; (W + L) + 4 &times; finished width + 10"</p><p>strips = length &divide; WOF, rounded up; fabric = strips &times; cut width</p></div>
+<p>This uses <b>butted corners</b>: sew the two side borders on first, each as long as the quilt top's length, then the top and bottom borders, each as long as the new width (old width + 2 &times; finished border). Adding those four lengths gives 2 &times; (W + L) + 4 &times; border width. The extra 10" covers the joining seams between strips and squaring up. For a second border, the calculation repeats using the size of the quilt after border 1.</p>
+<p><b>Worked example:</b> a 48" &times; 60" top with a 2" border needs 2 &times; (48 + 60) + 8 + 10 = 234" of strip. 234 &divide; 42 = 5.57, so cut <b>6 strips at 2 1/2"</b>: 15" of fabric, rounded up to <b>1/2 yard</b>. The top is now 52" &times; 64". A 5" outer border then needs 2 &times; (52 + 64) + 20 + 10 = 262", which is 7 strips at 5 1/2" = 38 1/2", or <b>1 1/8 yards</b>. Final top: 62" &times; 74" (61 1/2" &times; 73 1/2" finished after binding).</p>
+<p>For mitered corners, add twice the border width plus a few inches to each strip. For very long borders you can cut lengthwise along the grain to avoid seams; then buy the length of the longest border instead.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>How wide do I cut a quilt border?</summary><p>Cut it 1/2 inch wider than you want it to finish. A 3 inch finished border is cut 3 1/2 inches wide.</p></details>
+<details><summary>Why measure the quilt through the center?</summary><p>The outer edges of a pieced top stretch as you handle them. Cutting borders to the center measurement and easing the edges to fit keeps the quilt flat and square instead of wavy.</p></details>
+<details><summary>Should I sew side borders or top and bottom first?</summary><p>Either works as long as you are consistent. This calculator assumes sides first, so side borders equal the top's length and top and bottom borders equal the width plus both side borders.</p></details>
+<details><summary>How much extra fabric for mitered borders?</summary><p>Each strip must be longer by about twice the border width plus 2 to 4 inches, because the miter extends past the quilt corner.</p></details>
+<h2>More free quilt calculators</h2><ul class="related"><li><a href="binding.html">Binding</a></li><li><a href="backing.html">Backing</a></li><li><a href="hst-qst.html">HST &amp; QST</a></li><li><a href="yardage.html">Yardage</a></li><li><a href="quilt-sizes.html">Quilt sizes</a></li></ul>
+</div></main>
+<footer><div class="wrap">
+<div class="cols"><a href="./">All calculators</a><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a><a href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=footer" rel="noopener">QuiltCraft Pro</a></div>
+<p>Free quilting calculators. Results assume a 1/4" seam allowance; always double-check measurements before you cut. Updated 2026-11-19.</p>
+</div></footer>
+<script src="calc.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>

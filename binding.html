@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- SITE CONFIG: base URL = https://goksonline.github.io/quilt-calculators/ (set in _build/build.js, or search-and-replace this exact string in all .html, sitemap.xml, robots.txt) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quilt Binding Calculator: Strips &amp; Yardage | QuiltCalc</title>
+<meta name="description" content="Free quilt binding calculator. Enter your quilt size to get the number of binding strips to cut and the yardage to buy, in yards and meters.">
+<link rel="canonical" href="https://goksonline.github.io/quilt-calculators/binding.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuiltCalc">
+<meta property="og:title" content="Quilt Binding Calculator: Strips &amp; Yardage">
+<meta property="og:description" content="Free quilt binding calculator. Enter your quilt size to get the number of binding strips to cut and the yardage to buy, in yards and meters.">
+<meta property="og:url" content="https://goksonline.github.io/quilt-calculators/binding.html">
+<meta property="og:image" content="https://goksonline.github.io/quilt-calculators/og-quiltcraft.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3a2830">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How wide should I cut quilt binding strips?","acceptedAnswer":{"@type":"Answer","text":"2 1/2\" is the most common width for double-fold binding. Use 2 1/4\" for a slimmer binding on thin batting and 2 3/4\" to 3\" for thick, high-loft or wool batting."}},{"@type":"Question","name":"How much extra binding should I add?","acceptedAnswer":{"@type":"Answer","text":"Add 10 to 15 inches to the perimeter. That covers the diagonal joining seams, the mitered corners and the overlap where the ends are joined. If you are new to binding, use the full 15 inches."}},{"@type":"Question","name":"How many binding strips for a queen quilt?","acceptedAnswer":{"@type":"Answer","text":"A 90 x 108 queen quilt has a 396 inch perimeter. With 15 inches extra that is 411 inches, so you need 10 strips of 42 inch fabric, which is 25 inches of fabric, or 3/4 yard when cut at 2 1/2 inches."}},{"@type":"Question","name":"Do I need bias binding?","acceptedAnswer":{"@type":"Answer","text":"Only for curved, scalloped or rounded edges. Straight edges are fine with crosswise straight-grain strips, which is what this calculator assumes. Bias binding takes more fabric and is cut differently."}}]}</script>
+</head>
+<body data-page="binding">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">QuiltCalc</a><nav aria-label="Calculators"><a href="binding.html" aria-current="page">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a></nav></div></header>
+<main id="main"><div class="wrap">
+<h1>Quilt Binding Calculator</h1>
+<p class="lede">How many binding strips do you need, and how much fabric should you buy? Enter your finished quilt size.</p>
+<form class="calc" id="calc" novalidate>
+<div class="fields"><div><label for="qw">Quilt width</label><input id="qw" name="qw" type="text" inputmode="decimal" autocomplete="off" value="60"></div><div><label for="qh">Quilt length</label><input id="qh" name="qh" type="text" inputmode="decimal" autocomplete="off" value="72"></div><div><label for="sw">Strip width</label><input id="sw" name="sw" type="text" inputmode="decimal" autocomplete="off" value="2 1/2"></div><div><label for="wof">Usable width of fabric (WOF)</label><input id="wof" name="wof" type="text" inputmode="decimal" autocomplete="off" value="42"></div><div><label for="extra">Extra length</label><input id="extra" name="extra" type="text" inputmode="decimal" autocomplete="off" value="15"></div></div>
+<p class="hint">Inches. Fractions like <b>2 1/2</b> or decimals like <b>2.5</b> both work.</p>
+<div id="result" aria-live="polite"></div>
+</form>
+<aside class="pro" aria-label="QuiltCraft Pro"><p>Want to design the whole quilt and get every fabric's yardage automatically? QuiltCraft Pro builds the cutting list and a printable pattern as you design.</p><a class="btn" href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=binding" rel="noopener">QuiltCraft Pro &rarr;</a></aside>
+<h2>How it's calculated</h2>
+<p>Binding goes all the way around the quilt, so the starting point is the <b>perimeter</b>: twice the width plus twice the length. You then need a little more for the diagonal seams that join the strips, the folds at the four mitered corners, and the tail you overlap when the two ends meet. Most quilters add 10 to 15 inches; 15" is the safe default here.</p>
+<div class="formula"><p>binding length = 2 &times; (width + length) + extra</p><p>strips = binding length &divide; WOF, rounded up</p><p>fabric = strips &times; strip width, rounded up to the next 1/8 yard</p></div>
+<p><b>Worked example:</b> a 60" &times; 72" quilt has a perimeter of 2 &times; (60 + 72) = 264". Add 15" and you need 279" of binding. With 42" of usable width of fabric, 279 &divide; 42 = 6.64, so you cut <b>7 strips</b>. Seven 2 1/2" strips use 17 1/2" of fabric, which is 0.49 yards. Rounded up to the next eighth that is <b>1/2 yard</b> (about 0.5 m).</p>
+<p>Why use the usable width rather than the label width? Bolts are sold as 42&ndash;44" wide, but once you trim the selvages and square up, 40&ndash;42" is what you really get. If your fabric is narrow, or you lose length to the 45&deg; joining seams, enter 40 and the calculator will add a strip if needed.</p>
+<p>The strip width sets how wide the finished binding is. A 2 1/2" double-fold strip sewn with a 1/4" seam gives a binding that shows a bit under 3/8" on each side, which suits most cotton quilts. Narrower 2 1/4" strips give a tighter look; thick or wool batting needs 2 3/4" or more. The yardage shown is for straight-grain strips cut across the width of fabric. Meters are rounded up to the next 0.1 m.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>How wide should I cut quilt binding strips?</summary><p>2 1/2&quot; is the most common width for double-fold binding. Use 2 1/4&quot; for a slimmer binding on thin batting and 2 3/4&quot; to 3&quot; for thick, high-loft or wool batting.</p></details>
+<details><summary>How much extra binding should I add?</summary><p>Add 10 to 15 inches to the perimeter. That covers the diagonal joining seams, the mitered corners and the overlap where the ends are joined. If you are new to binding, use the full 15 inches.</p></details>
+<details><summary>How many binding strips for a queen quilt?</summary><p>A 90 x 108 queen quilt has a 396 inch perimeter. With 15 inches extra that is 411 inches, so you need 10 strips of 42 inch fabric, which is 25 inches of fabric, or 3/4 yard when cut at 2 1/2 inches.</p></details>
+<details><summary>Do I need bias binding?</summary><p>Only for curved, scalloped or rounded edges. Straight edges are fine with crosswise straight-grain strips, which is what this calculator assumes. Bias binding takes more fabric and is cut differently.</p></details>
+<h2>More free quilt calculators</h2><ul class="related"><li><a href="backing.html">Backing</a></li><li><a href="borders.html">Borders</a></li><li><a href="hst-qst.html">HST &amp; QST</a></li><li><a href="yardage.html">Yardage</a></li><li><a href="quilt-sizes.html">Quilt sizes</a></li></ul>
+</div></main>
+<footer><div class="wrap">
+<div class="cols"><a href="./">All calculators</a><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a><a href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=footer" rel="noopener">QuiltCraft Pro</a></div>
+<p>Free quilting calculators. Results assume a 1/4" seam allowance; always double-check measurements before you cut. Updated 2026-11-19.</p>
+</div></footer>
+<script src="calc.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
