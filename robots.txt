@@ -1,0 +1,7 @@
+# base URL: https://goksonline.github.io/quilt-calculators/
+User-agent: *
+Allow: /
+Disallow: /_build/
+Disallow: /_test/
+
+Sitemap: https://goksonline.github.io/quilt-calculators/sitemap.xml

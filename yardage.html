@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- SITE CONFIG: base URL = https://goksonline.github.io/quilt-calculators/ (set in _build/build.js, or search-and-replace this exact string in all .html, sitemap.xml, robots.txt) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quilt Yardage Calculator: Squares &amp; Rectangles | QuiltCalc</title>
+<meta name="description" content="Free quilt fabric yardage calculator. Find how many squares or rectangles fit across the width of fabric, how many strips to cut and how much fabric to buy.">
+<link rel="canonical" href="https://goksonline.github.io/quilt-calculators/yardage.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="QuiltCalc">
+<meta property="og:title" content="Quilt Yardage Calculator: Squares &amp; Rectangles">
+<meta property="og:description" content="Free quilt fabric yardage calculator. Find how many squares or rectangles fit across the width of fabric, how many strips to cut and how much fabric to buy.">
+<meta property="og:url" content="https://goksonline.github.io/quilt-calculators/yardage.html">
+<meta property="og:image" content="https://goksonline.github.io/quilt-calculators/og-quiltcraft.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3a2830">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the usable width of fabric?","acceptedAnswer":{"@type":"Answer","text":"Quilting cotton is sold 42 to 44 inches wide, but after trimming the selvages you can count on about 40 to 42 inches. Enter 40 if you want a safety buffer."}},{"@type":"Question","name":"Should I buy extra fabric?","acceptedAnswer":{"@type":"Answer","text":"Yes, a little. Adding 10 percent covers a miscut, shrinkage if you prewash and straightening the fabric edge. Directional prints may need more."}},{"@type":"Question","name":"Can I use this for fat quarters?","acceptedAnswer":{"@type":"Answer","text":"Yes. A fat quarter is about 18 x 21 inches. Enter 21 as the width; the number of strips tells you how many 21 inch strips you need, and every fat quarter gives about 18 inches of strip height."}},{"@type":"Question","name":"Does this include seam allowance?","acceptedAnswer":{"@type":"Answer","text":"It uses the sizes you type as cut sizes. Tick the finished-size box to have 1/2 inch added to each side length automatically."}}]}</script>
+</head>
+<body data-page="yardage">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="favicon.svg" alt="" width="28" height="28">QuiltCalc</a><nav aria-label="Calculators"><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html" aria-current="page">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a></nav></div></header>
+<main id="main"><div class="wrap">
+<h1>Quilt Fabric Yardage Calculator</h1>
+<p class="lede">How much fabric for 40 squares, or 120 rectangles? Enter the piece size and count to get strips, pieces per strip and yardage.</p>
+<form class="calc" id="calc" novalidate>
+<div class="fields"><div><label for="pw">Piece width</label><input id="pw" name="pw" type="text" inputmode="decimal" autocomplete="off" value="5"></div><div><label for="ph">Piece height</label><input id="ph" name="ph" type="text" inputmode="decimal" autocomplete="off" value="5"></div><div><label for="qty">How many pieces</label><input id="qty" name="qty" type="text" inputmode="decimal" autocomplete="off" value="40"></div><div><label for="wof">Usable width of fabric (WOF)</label><input id="wof" name="wof" type="text" inputmode="decimal" autocomplete="off" value="42"></div><div><label for="margin">Extra for mistakes (%)</label><input id="margin" name="margin" type="text" inputmode="decimal" autocomplete="off" value="0"></div></div>
+<label class="chk"><input type="checkbox" id="fin"> These are finished sizes (add 1/2" seam allowance)</label>
+<p class="hint">Inches. Fractions like <b>2 1/2</b> or decimals like <b>2.5</b> both work.</p>
+<div id="result" aria-live="polite"></div>
+</form>
+<aside class="pro" aria-label="QuiltCraft Pro"><p>Want to design the whole quilt and get every fabric's yardage automatically? QuiltCraft Pro builds the cutting list and a printable pattern as you design.</p><a class="btn" href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=yardage" rel="noopener">QuiltCraft Pro &rarr;</a></aside>
+<h2>How it's calculated</h2>
+<p>Quilters cut patches from strips that run across the width of fabric (WOF), selvage to selvage. So the question is: how many pieces fit across one strip, and how many strips do you need?</p>
+<div class="formula"><p>pieces per strip = WOF &divide; piece side, rounded down</p><p>strips = pieces needed &divide; pieces per strip, rounded up</p><p>fabric = strips &times; strip width (+ extra %), rounded up to 1/8 yard</p></div>
+<p>For rectangles, there are two ways to cut: strips as wide as the short side with the long side across the WOF, or the other way round. The calculator tries both and picks the one that uses less fabric. This is the same packing logic QuiltCraft Pro uses for its cutting lists.</p>
+<p><b>Worked example:</b> forty 5" squares. 42 &divide; 5 = 8.4, so 8 squares fit across a strip. 40 &divide; 8 = 5 strips, each 5" wide, which is 25" of fabric, or 0.69 yard, rounded up to <b>3/4 yard</b>. Add 10% for mistakes and it becomes 27 1/2", or 7/8 yard.</p>
+<p>A rectangle example: thirty 2 1/2" &times; 4 1/2" pieces. Cutting 4 1/2" strips and sub-cutting at 2 1/2" gives 16 per strip, so 2 strips, 9" of fabric. Cutting 2 1/2" strips gives only 9 per strip and needs 4 strips (10"). The first wins: <b>1/4 yard</b>.</p>
+<p>Enter <b>cut</b> sizes (including seam allowance), or tick the box to enter finished sizes and let the calculator add 1/2". For half square triangles, use the cut square size from the <a href="hst-qst.html">HST calculator</a>. Meters are rounded up to the next 0.1 m.</p>
+<h2 id="faq">Frequently asked questions</h2>
+<details><summary>What is the usable width of fabric?</summary><p>Quilting cotton is sold 42 to 44 inches wide, but after trimming the selvages you can count on about 40 to 42 inches. Enter 40 if you want a safety buffer.</p></details>
+<details><summary>Should I buy extra fabric?</summary><p>Yes, a little. Adding 10 percent covers a miscut, shrinkage if you prewash and straightening the fabric edge. Directional prints may need more.</p></details>
+<details><summary>Can I use this for fat quarters?</summary><p>Yes. A fat quarter is about 18 x 21 inches. Enter 21 as the width; the number of strips tells you how many 21 inch strips you need, and every fat quarter gives about 18 inches of strip height.</p></details>
+<details><summary>Does this include seam allowance?</summary><p>It uses the sizes you type as cut sizes. Tick the finished-size box to have 1/2 inch added to each side length automatically.</p></details>
+<h2>More free quilt calculators</h2><ul class="related"><li><a href="binding.html">Binding</a></li><li><a href="backing.html">Backing</a></li><li><a href="borders.html">Borders</a></li><li><a href="hst-qst.html">HST &amp; QST</a></li><li><a href="quilt-sizes.html">Quilt sizes</a></li></ul>
+</div></main>
+<footer><div class="wrap">
+<div class="cols"><a href="./">All calculators</a><a href="binding.html">Binding</a><a href="backing.html">Backing</a><a href="borders.html">Borders</a><a href="hst-qst.html">HST &amp; QST</a><a href="yardage.html">Yardage</a><a href="quilt-sizes.html">Quilt sizes</a><a href="https://motorintelligence.gumroad.com/l/quiltcraft-pro?utm_source=quiltcalc&utm_medium=site&utm_campaign=footer" rel="noopener">QuiltCraft Pro</a></div>
+<p>Free quilting calculators. Results assume a 1/4" seam allowance; always double-check measurements before you cut. Updated 2026-11-19.</p>
+</div></footer>
+<script src="calc.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
